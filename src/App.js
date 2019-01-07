@@ -22,53 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Grid container>
-          <Hidden smUp>
-            <Grid 
-              item
-              xs={12}
-            >
-              <TabMenu tabs={this.state.menu.allItems} />
-            </Grid>
-          </Hidden>
-         
-          <Hidden xsDown lgUp>
-            <Grid 
-              item
-              sm={6}
-            >
-              <TabMenu tabs={this.state.menu.gamesItems} />
-            </Grid>
-            <Grid 
-              item
-              sm={6}
-            >
-              <TabMenu tabs={this.state.menu.rightItems} />
-            </Grid>
-          </Hidden>
-
-          <Hidden mdDown>
-            <Grid 
-              item
-              lg={4}
-            >
-              <TabMenu tabs={this.state.menu.gamesItems} />
-            </Grid>
-            <Grid 
-              item
-              lg={4}
-            >
-              <TabMenu tabs={this.state.menu.newsItems} />
-            </Grid>
-            <Grid 
-              item
-              lg={4}
-            >
-              <TabMenu tabs={this.state.menu.championshipItems} />
-            </Grid>
-          </Hidden>
-        </Grid>
-        
+        <TabMenu />
         <Footer />
       </div>
     );
