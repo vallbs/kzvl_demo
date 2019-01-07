@@ -1,63 +1,85 @@
 import React, { Component } from 'react';
-import { Paper, Tab, Tabs, Typography } from '@material-ui/core';
+import { Grid, Hidden, Paper, withStyles } from '@material-ui/core';
+import TabMenuItem from './TabMenuItem';
+import GameInfo from '../Games/GameInfo';
+import GameBody from '../Games/GameBody';
+import * as menuItems from '../../consts/menuItems';
+import { games } from '../Games/games';
 
-function TabContainer(props) {
-    return (
-      <Typography component="div" style={{ padding: 8 * 3 }}>
-        {props.children}
-      </Typography>
-    );
-}
-
-function LinkTab(props) {
-    return (
-        <Tab 
-            component="a" 
-            onClick={event => event.preventDefault()} 
-            {...props} 
-        />
-    );
+const styles = {
+    game: {
+        marginBottom: '12px',
+        paddingTop: '4px',
+        paddingBottom: '4px'
+    }
 }
 
 class TabMenu extends Component {
     state = {
-        value: 0
-    };
-
-    handleChange = (event, value) => {
-        this.setState({ value });
+        menu: {
+          allItems: menuItems.allItems,
+          gamesItems: menuItems.gamesItems,
+          rightItems: menuItems.rightItems,
+          newsItems: menuItems.newsItems,
+          championshipItems: menuItems.championshipItems
+        },
     };
 
     render() {
-        const tabs = this.props.tabs;
-        const tabsArray = Object.keys(tabs);
-        const tabsElement = tabsArray.map(item => {
-            return (
-                <LinkTab 
-                    key={tabs[item].name} 
-                    label={tabs[item].title} 
-                />
+        const gamesElement = games.map(item => {
+            return(
+                <Paper className={this.props.classes.game}>
+                    <GameInfo {...item} />
+                    <GameBody {...item} />
+                </Paper>
+                
             );
         });
 
         return (
-            <div>
-                <Paper>
-                    <Tabs 
-                        value={this.state.value} 
-                        onChange={this.handleChange}
-                        variant="fullWidth"
-                        >
-                        { tabsElement }
-                    </Tabs>
-                </Paper>
-                {this.state.value === 0 && <TabContainer>Item One</TabContainer>}
-                {this.state.value === 1 && <TabContainer>Item Two</TabContainer>}
-                {this.state.value === 2 && <TabContainer>Item Three</TabContainer>}
-                {this.state.value === 3 && <TabContainer>Item Four</TabContainer>}
-            </div>
+            <Grid container>
+                {/* extra-small-600 */}
+                <Hidden smUp>
+                <Grid item xs={12}>
+                    <TabMenuItem tabs={this.state.menu.allItems} />
+                    { gamesElement }
+                </Grid>
+                </Hidden>
+    
+                {/* small-960 */}
+                <Hidden xsDown mdUp>
+                <Grid item sm={12}>
+                    <TabMenuItem tabs={this.state.menu.allItems} />
+                </Grid>
+                </Hidden>
+    
+                {/* medium-1280 */}
+                <Hidden smDown lgUp>
+                <Grid item md={6}>
+                    <TabMenuItem tabs={this.state.menu.gamesItems} />
+                </Grid>
+                <Grid item md={6}>
+                    <TabMenuItem tabs={this.state.menu.rightItems} />
+                </Grid>
+                </Hidden>
+    
+                {/* large-1920 */}
+                <Hidden mdDown xlUp>
+                <Grid item lg={4}>
+                    <TabMenuItem tabs={this.state.menu.gamesItems} />
+                </Grid>
+                <Grid item lg={4}>
+                    <TabMenuItem tabs={this.state.menu.newsItems} />
+                </Grid>
+                <Grid item lg={4}>
+                    <TabMenuItem tabs={this.state.menu.championshipItems} />
+                </Grid>
+                </Hidden>
+            </Grid>
         );
     }
+
+    
 };
 
-export default TabMenu;
+export default withStyles(styles)(TabMenu);
