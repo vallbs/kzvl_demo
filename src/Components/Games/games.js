@@ -6,6 +6,8 @@ export const games = [
         division: '1D - men - group A',
         homeName: 'Kerlam',
         awayName: 'Irpen',
+        homeLogo: 'https://ukv.org.ua/images/stories/2010-2011/man/1divizion/Kerlam/artlogoS.png',
+        awayLogo: 'https://ukv.org.ua/images/stories/Classic/2013-2014/Teams/RICH/RICHS.png',
         score: {
             home: {
                 setsWin: 3,
@@ -66,6 +68,8 @@ export const games = [
         division: '1D - men - group B',
         homeName: 'Kyivskyi Politech',
         awayName: 'Trener Skazav',
+        homeLogo: 'https://ukv.org.ua/images/stories/2010-2011/man/1divizion/Kerlam/artlogoS.png',
+        awayLogo: 'https://ukv.org.ua/images/stories/Classic/2013-2014/Teams/RICH/RICHS.png',
         score: {
             home: {
                 setsWin: 3,
@@ -126,6 +130,8 @@ export const games = [
         division: '1D - men - group B',
         homeName: 'Kyivskyi Politech',
         awayName: 'Trener Skazav',
+        homeLogo: 'https://ukv.org.ua/images/stories/2010-2011/man/1divizion/Kerlam/artlogoS.png',
+        awayLogo: 'https://ukv.org.ua/images/stories/Classic/2013-2014/Teams/RICH/RICHS.png',
         score: {
             home: {
                 setsWin: 3,
@@ -186,6 +192,8 @@ export const games = [
         division: '1D - men - group B',
         homeName: 'Kyivskyi Politech',
         awayName: 'Trener Skazav',
+        homeLogo: 'https://ukv.org.ua/images/stories/2010-2011/man/1divizion/Kerlam/artlogoS.png',
+        awayLogo: 'https://ukv.org.ua/images/stories/Classic/2013-2014/Teams/RICH/RICHS.png',
         score: {
             home: {
                 setsWin: 3,
@@ -246,6 +254,8 @@ export const games = [
         division: '1D - men - group B',
         homeName: 'Kyivskyi Politech',
         awayName: 'Trener Skazav',
+        homeLogo: 'https://ukv.org.ua/images/stories/2010-2011/man/1divizion/Kerlam/artlogoS.png',
+        awayLogo: 'https://ukv.org.ua/images/stories/Classic/2013-2014/Teams/RICH/RICHS.png',
         score: {
             home: {
                 setsWin: 3,
@@ -306,6 +316,8 @@ export const games = [
         division: '1D - men - group B',
         homeName: 'Kyivskyi Politech',
         awayName: 'Trener Skazav',
+        homeLogo: 'https://ukv.org.ua/images/stories/2010-2011/man/1divizion/Kerlam/artlogoS.png',
+        awayLogo: 'https://ukv.org.ua/images/stories/Classic/2013-2014/Teams/RICH/RICHS.png',
         score: {
             home: {
                 setsWin: 3,
@@ -366,6 +378,8 @@ export const games = [
         division: '1D - men - group B',
         homeName: 'Kyivskyi Politech',
         awayName: 'Trener Skazav',
+        homeLogo: 'https://ukv.org.ua/images/stories/2010-2011/man/1divizion/Kerlam/artlogoS.png',
+        awayLogo: 'https://ukv.org.ua/images/stories/Classic/2013-2014/Teams/RICH/RICHS.png',
         score: {
             home: {
                 setsWin: 3,
