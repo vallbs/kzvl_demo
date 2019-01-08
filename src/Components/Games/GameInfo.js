@@ -1,32 +1,6 @@
 import React from 'react';
 import { Typography, withStyles } from '@material-ui/core';
-import './GameInfo.css';
-
-const styles = {
-    infoWrapper: {
-        display: 'flex',
-        margin: '4px 8px 8px 8px',
-    },
-    infoItem: {
-        flexGrow: 1,
-        fontSize: '10px',
-        // border: '1px solid red'
-    },
-    infoItemRight: {
-        flexGrow: 1,
-        fontSize: '10px',
-        // paddingRight: '4px',
-        textAlign: 'right',
-        // border: '1px solid red'
-    },
-    infoItemLeft: {
-        flexGrow: 1,
-        fontSize: '10px',
-        // paddingLeft: '4px',
-        textAlign: 'left',
-        // border: '1px solid red'
-    }
-};
+import styles from './GameInfo.styles';
 
 const gameInfo = props => {
     return (
